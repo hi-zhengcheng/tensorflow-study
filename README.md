@@ -16,3 +16,9 @@ This repository includes my tensorflow study notes.
 1. View the tensorflow graph in your web browser: http://127.0.0.1:6006 . In `Graphs` tab, you can view your tensorflow graph.
 
 1. Finally, shutdown your tensorboard server.
+
+## simple linear regression
+1. Run script:
+    ```
+    python simple_linear_regression.py
+    ```
