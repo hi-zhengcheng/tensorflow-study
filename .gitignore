@@ -1,2 +1,3 @@
 tmp/
+mnist/MNIST_data/
 *.pyc
