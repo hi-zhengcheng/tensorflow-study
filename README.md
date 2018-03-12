@@ -1,24 +1,31 @@
 # tensorflow-study
 
-This repository includes my tensorflow study notes.
+Today(2018-03-12), I want to write a tensorflow self-study series. Hope it will notivate me to master machine learning theory, related algorithms and some coding skills.
 
-## visualize tensorflow graph
-1. Run script to create tensorflow graph data in tmp dir.
-    ```
-    python visualize_tf_graph.py
-    ```
+## Contents
 
-1. Start the tensorboard server:
-    ```
-    tensorboard --logdir=tmp
-    ```
+* Basic Concepts
+    * PlaceHolder
+    * Constant
+    * Variable
+    * Graph
+    * Operation
+    * Save and Read Data
+    * Train Model
+    * Back propagation
+    * Save and Restore Model
+    * Visualize model graph
+    * View variable update procedure
+    * Overfitting
+    * Train, Eval and Test
+    * Dropout
+    * Others...
 
-1. View the tensorflow graph in your web browser: http://127.0.0.1:6006 . In `Graphs` tab, you can view your tensorflow graph.
+* Common used networks
+    * Fully Connected network
+    * CNN
+    * RNN, LSTM
 
-1. Finally, shutdown your tensorboard server.
-
-## simple linear regression
-1. Run script:
-    ```
-    python simple_linear_regression.py
-    ```
+* Case study
+    * Image To Text
+    * Multilabel Classification
