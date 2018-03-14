@@ -8,9 +8,9 @@ Today(2018-03-12), I want to write a tensorflow self-study series. Hope it will 
     * PlaceHolder
     * Constant
     * Variable
-    * [Image Input](image_input)
+    * [Operation](operation)
     * Graph
-    * Operation
+    * [Image Input](image_input)
     * Save and Read Data
     * Train Model
     * Back propagation
