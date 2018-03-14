@@ -28,5 +28,5 @@ Today(2018-03-12), I want to write a tensorflow self-study series. Hope it will 
     * RNN, LSTM
 
 * Case study
-    * Image To Text
+    * [Image To Text](image-to-text)
     * Multilabel Classification
