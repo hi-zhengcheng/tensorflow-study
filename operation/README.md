@@ -160,7 +160,7 @@ sess.run('test_add:0', feed_dict={'test_placeholder:0': 1, placeholder2:2})
 in feed_dict, we can also use the above two methods to pass value.
 
 ## 4 Conclusion
-* In tensorflow, the most baisic thing is `op`. Then graph graph consists of `op` nodes connected to each other.
+* In tensorflow, the most baisic thing is `op`. The graph consists of `op` nodes connected to each other.
 * Tensor is the output of `op`.
 * There are two methods to fetch or feed tensor:
     1. by tensor directly
