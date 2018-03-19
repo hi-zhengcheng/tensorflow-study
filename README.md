@@ -29,4 +29,4 @@ Today(2018-03-12), I want to write a tensorflow self-study series. Hope it will 
 
 * Case study
     * [Image To Text](image-to-text)
-    * Multilabel Classification
+    * [Multilabel Classification](multilabel-classification)
