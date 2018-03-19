@@ -1,10 +1,6 @@
 Multi Label Classification can be used in many scenes. In this post, I will study how it works in image classification. That is, give an image as input, then I can get which classes this image belongs to as output.
 
-Content
-
-[TOC]
-
-# Singlelabel classification case study
+# 1 Singlelabel classification case study
 
 First, we can study how single class classification works by reading [this post](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/docs_src/tutorials/image_retraining.md#how-to-retrain-inceptions-final-layer-for-new-categories), and it's [source code](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/image_retraining/retrain.py).
 
@@ -23,17 +19,17 @@ By reading the post, we can know the main workflow is as follows:
 [Inception V3 model detail](http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf)
 
 
-# Multilabel classification
+# 2 Multilabel classification
 The above post describes single label image classification and the code implementation only support sinlge label clasification. Actually, this method also support multilabel classificaion. And I will modify the code to make it work on multilable classification task.
 
 I find [this repository](https://github.com/BartyzalRadek/Multi-label-Inception-net/blob/master/retrain.py) already implement the multilable classification.
 
 
-## prepare training data
+## 2.1 repare training data
 training data with multilabel
 
-## modify the code
+## 2.2 modify the code
 modify the `retrain.py` to support multilabel classification.
 
-## test
+## 2.3 test
 test the trained model
