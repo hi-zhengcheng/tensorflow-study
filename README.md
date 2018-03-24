@@ -9,9 +9,9 @@ Today(2018-03-12), I want to write a tensorflow self-study series. Hope it will 
     * Constant
     * Variable
     * [Operation](operation)
-    * Graph
+    * [Graph](graph)
     * [Image Input](image_input)
-    * Save and Read Data
+    * [Save and Restore](save_and_restore)
     * Train Model
     * Back propagation
     * Save and Restore Model
