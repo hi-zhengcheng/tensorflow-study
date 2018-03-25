@@ -13,6 +13,7 @@ Today(2018-03-12), I want to write a tensorflow self-study series. Hope it will 
     * [Image Input](image_input)
     * [Save and Restore](save_and_restore)
     * Train Model
+    * [Serving](serving)
     * Back propagation
     * Save and Restore Model
     * Visualize model graph
