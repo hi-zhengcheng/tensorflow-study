@@ -94,8 +94,6 @@ When using someone else's pre-trained model, we have two things to do:
 Then, we can use `graph.get_tensor_by_name()` to get PlaceHolders, Variables, Constants and Operations. We can do inference or fine-tuning further more.
 
 
-
-
 We can use following script to inspect specific tensor, or all tensors.
 ```
 from tensorflow.python.tools import inspect_checkpoint as chkp
@@ -104,4 +102,4 @@ chkp.print_tensors_in_checkpoint_file('model/simple_network', tensor_name='', al
 ```
 
 
-Thanks to [this good post](http://cv-tricks.com/tensorflow-tutorial/save-restore-tensorflow-models-quick-complete-tutorial/) about save and restore. 
+Thanks to [this good post](http://cv-tricks.com/tensorflow-tutorial/save-restore-tensorflow-models-quick-complete-tutorial/) about save and restore.
