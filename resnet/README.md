@@ -9,9 +9,10 @@ From [this page](https://github.com/tensorflow/models/tree/master/research/slim)
 * [resnet_utils.py](https://github.com/tensorflow/models/blob/master/research/slim/nets/resnet_utils.py)
 
 ## Attention
-* **Latest** resnet_v2.py in `tensorflow/models` has some differents compared with the file in `tensorflow/tensorflow` git repository. Here I just use the network file in `tensorflow/models` repository. I have not test the network file in `tensorflow/tensorflow`.
+* `resnet_v2.py` in `tensorflow/models` has some differents compared with the file in `tensorflow/tensorflow` git repository. Here I just use the network file in `tensorflow/models` repository. I have not test the network file in `tensorflow/tensorflow`.
 
 ## Step
 1. In the test file, modify some params first.
 1. `python test_resnet_v2_101.py`
 1. After running, use tensorboard to visualize the network graph.
+1. In the test code, I just use `global_pool` layer's output as image feature.
