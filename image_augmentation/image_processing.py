@@ -12,9 +12,7 @@ def gen_image_process_net(image_path, is_training, output_path):
 	# resize image 
 	resize_height = 300
 	resize_width = 300
-	img = tf.image.resize_images(img, 
-								size=[resize_height, resize_width], 
-								method=tf.image.ResizeMethod.BILINEAR)
+	img = tf.image.resize_images(img, size=[resize_height, resize_width], method=tf.image.ResizeMethod.BILINEAR)
 
 	# crop to target size
 	target_height = 224
