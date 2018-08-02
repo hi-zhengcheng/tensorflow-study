@@ -10,7 +10,7 @@ Today(2018-03-12), I want to write a tensorflow self-study series. Hope it will 
     * Variable
     * [Operation](operation)
     * [Graph](graph)
-    * [Image Input](image_input)
+    * [Image augmentation](image_augmentation)
     * [Save and Restore](save_and_restore)
     * Train Model
     * [Serving](serving)
