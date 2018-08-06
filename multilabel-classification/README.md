@@ -18,17 +18,17 @@ Multi Label Classification can be used in many scenes. In this post, I will stud
 
 Find help by:
 
-'''
+```
 python create_tfrecord.py --h
-'''
+```
 
 1. Read data from TFRecord:
 
 Find help by:
 
-'''
+```
 python read_tfrecord.py --h
-'''
+```
 
 Tensorflow uses queuing and threading to do high-performance training, especially in data reading. This [blog](http://adventuresinmachinelearning.com/introduction-tensorflow-queuing/) gives a clear tutorial to the tensorflow queuing and threading.And [this blog](http://machinelearninguru.com/deep_learning/data_preparation/tfrecord/tfrecord.html) gives a clear tutorial to tfrecord.
 
