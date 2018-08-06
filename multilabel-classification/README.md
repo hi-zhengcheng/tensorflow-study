@@ -1,35 +1,42 @@
-Multi Label Classification can be used in many scenes. In this post, I will study how it works in image classification. That is, give an image as input, then I can get which classes this image belongs to as output.
+# Multi label classification
 
-# 1 Singlelabel classification case study
+Multi Label Classification can be used in many scenes. In this post, I will study how it works in image classification. That is, give an image as input, then I can get which classes this image belongs to as output. I find [this repository](https://github.com/BartyzalRadek/Multi-label-Inception-net/blob/master/retrain.py) already implement the multilable classification. Here I will implement one on scratch. 
 
-First, we can study how single class classification works by reading [this post](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/docs_src/tutorials/image_retraining.md#how-to-retrain-inceptions-final-layer-for-new-categories), and it's [source code](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/image_retraining/retrain.py).
+## 1 Input data processing
+1. Put all images in one folder.
 
-By reading the post, we can know the main workflow is as follows:
+1. Prepare `imglist_file`, `imglabel_file`:
 
+    * imglist_file: txt file, each line contains two field seperated by one blank char. 
+        ** field1: image_name
+        ** filed2: how may labels this image belongs to
 
-1. Use Inception V3 model, we can obtain a 2048 dimension representation vector for an image.
-
-1. Suppose now we have N image classes, we use a fully connected network to convert dimension of image representation vector from 2048 to N.
-
-1. Use softmax, we can get N probability like values. For These N values, Imagine each index represent a class, and each value at a specific index represent the probability the image belongs to this class, then we can use this N valuse and the true image classes to create a cost function. For example, use cross-entropy.
-
-1. Using gradient descent algorithms, we can update params in the fully connected network to make the cost function smaller.
+    * imglabel_file: txt file, each line contains ground truth labels corresponding to the image with same line number in imglist_file.
 
 
-[Inception V3 model detail](http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf)
+1. Create TFRecord files:
 
+Find help by:
 
-# 2 Multilabel classification
-The above post describes single label image classification and the code implementation only support sinlge label clasification. Actually, this method also support multilabel classificaion. And I will modify the code to make it work on multilable classification task.
+'''
+python create_tfrecord.py --h
+'''
 
-I find [this repository](https://github.com/BartyzalRadek/Multi-label-Inception-net/blob/master/retrain.py) already implement the multilable classification.
+1. Read data from TFRecord:
 
+Find help by:
 
-## 2.1 repare training data
-training data with multilabel
+'''
+python read_tfrecord.py --h
+'''
 
-## 2.2 modify the code
-modify the `retrain.py` to support multilabel classification.
+Tensorflow uses queuing and threading to do high-performance training, especially in data reading. This [blog](http://adventuresinmachinelearning.com/introduction-tensorflow-queuing/) gives a clear tutorial to the tensorflow queuing and threading.And [this blog](http://machinelearninguru.com/deep_learning/data_preparation/tfrecord/tfrecord.html) gives a clear tutorial to tfrecord.
 
-## 2.3 test
-test the trained model
+Keep in mind : 
+* When writing tensorflow code, it actually builds up an **computation graph**. It doesn't run until you run it through `tf.Session` object.
+* When runing **end node** of the **computation graph**, operation on the **root node** will first run, then go on, until reach to the **end node**.
+
+## 2 Models
+* Use Resnet, or inception model to extract image feature. We need to decide from which layer of these pretrained models, we can find a 'good' image feature.
+* Add additional layers at the end
+* ...
